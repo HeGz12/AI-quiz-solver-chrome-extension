@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Test Solver</title>
+  <meta charset="UTF-8">
+  <style>
+    body { font-family: sans-serif; width: 320px; padding: 10px; background-color: #f4f7f9; }
+    h1 { font-size: 18px; text-align: center; color: #333; margin-top: 0; }
+    .container { margin-bottom: 15px; padding: 10px; background-color: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+    label { display: block; margin-bottom: 5px; font-weight: bold; color: #555; font-size: 14px; }
+    input[type="password"], input[type="text"] { width: 95%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; }
+    button { width: 100%; padding: 10px; border: none; border-radius: 5px; color: white; font-weight: bold; cursor: pointer; transition: background-color 0.2s; }
+    #saveKey { background-color: #007bff; }
+    #saveKey:hover { background-color: #0056b3; }
+    #checkApi { background-color: #6c757d; margin-bottom: 5px; }
+    #checkApi:hover { background-color: #5a6268; }
+    .actions button { margin-bottom: 10px; }
+    #solveText { background-color: #28a745; }
+    #solveText:hover { background-color: #218838; }
+    #solveScreenshot { background-color: #ffc107; color: #212529; }
+    #solveScreenshot:hover { background-color: #e0a800; }
+    #apiStatus, #status { font-size: 12px; text-align: center; margin-top: 5px; }
+    hr { border: none; border-top: 1px solid #eee; margin: 15px 0; }
+    .options { display: flex; align-items: center; }
+    .options label { margin: 0 0 0 8px; font-weight: normal; }
+  </style>
+</head>
+<body>
+  <h1>🤖 AI Test Solver</h1>
+  
+  <div class="container">
+    <label for="apiKey">🔑 Klucz Google AI API:</label>
+    <input type="password" id="apiKey" placeholder="Wklej swój klucz API tutaj">
+    <button id="saveKey" style="margin-top: 8px;">💾 Zapisz Klucz</button>
+  </div>
+
+  <div class="container">
+    <button id="checkApi">🔍 Sprawdź Status API</button>
+    <p id="apiStatus">Status: Nie sprawdzono</p>
+  </div>
+
+  <hr>
+
+  <div class="container">
+    <label>🎯 Akcje</label>
+    <div class="actions">
+      <button id="solveText">⚡ Automatyczne rozwiązanie</button>
+      <button id="solveScreenshot">📸 Rozwiąż ze zrzutu ekranu</button>
+    </div>
+    <!-- NOWOŚĆ: Opcja automatycznego zaznaczania -->
+    <div class="options">
+      <input type="checkbox" id="autoSelect" checked>
+      <label for="autoSelect">Automatycznie zaznacz odpowiedź</label>
+    </div>
+    <p id="status">✅ Gotowy do działania.</p>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
